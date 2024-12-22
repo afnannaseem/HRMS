@@ -1,0 +1,479 @@
+﻿
+html, body {
+    height: 100%; /* Full height for html and body */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Makes the body a flex container */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdf6e3;
+    color: #5a4a42;
+}
+
+header {
+    background-color: #f4a261; /* Softer shade of orange */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; /* Added padding for spacing */
+}
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; /* Removes default margin */
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center the links */
+        flex-grow: 1; /* Allows the links to fill the space */
+    }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+            nav ul li:last-child {
+                margin-right: 0;
+            }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+/* Styles for logout button */
+#logout-button {
+    background-color: #e76f51; /* Darker, softer orange */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    #logout-button:hover {
+        background-color: #d35400; /* Even darker shade for hover effect */
+    }
+
+main {
+    flex: 1; /* Allows the main content to grow and fill the space */
+    padding: 20px;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 40px;
+    margin-bottom: 40px; /* Space for the footer */
+}
+
+.welcome-section, .dashboard-widgets {
+    margin-bottom: 20px;
+}
+
+.widget {
+    background-color: #fff;
+    border: 1px solid #e0d0c1; /* Light warm gray border */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    min-height: 100px; /* Ensuring enough space for content */
+}
+
+.employee-management {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.employee-actions .action {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f4a261;
+    color: #fff;
+    width: 100%;
+}
+
+/* Previous CSS styles remain the same */
+
+.add-employee-form label,
+.add-employee-form input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%; /* Makes the input fields expand to full width */
+}
+
+.add-employee-form button {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .add-employee-form button:hover {
+        background-color: #d35400;
+    }
+
+.employee-list div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds a small space between the name and the button */
+}
+
+.edit-employee ul, .deactivate-employee ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .edit-employee ul li, .deactivate-employee ul li {
+        margin-bottom: 10px;
+    }
+
+.edit-employee button, .deactivate-employee button {
+    background-color: #f4a261;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .edit-employee button:hover, .deactivate-employee button:hover {
+        background-color: #e76f51;
+    }
+
+/* ... (other CSS styles remain as they were) ... */
+
+/* ... (other CSS styles remain as they were) ... */
+
+.gender-field label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.gender-field > div {
+    display: inline-block; /* Aligns radio buttons inline with the label */
+    margin-right: 20px; /* Adds spacing between Male and Female options */
+}
+
+.gender-field input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* ... (other CSS styles remain as they were) ... */
+
+.employee-action-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.employee-list {
+    display: flex;
+    flex-direction: column;
+}
+
+    .employee-list div {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .employee-list button {
+        background-color: #f4a261;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .employee-list button:hover {
+            background-color: #e76f51;
+        }
+
+/* ... (existing styles from Employee Management Page) ... */
+
+.recruitment-section, .application-management-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-job-form label,
+.post-job-form input,
+.post-job-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.post-job-form button, .application-list button {
+    background-color: #f4a261; /* Warm orange color */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Adds spacing if there are multiple buttons */
+}
+
+    .post-job-form button:hover, .application-list button:hover {
+        background-color: #e76f51; /* Darker shade for hover effect */
+    }
+
+.application-list div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.schedule-interview-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.interviewee-name {
+    margin-bottom: 20px;
+}
+
+.schedule-interview-form label,
+.schedule-interview-form input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.schedule-interview-form button {
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .schedule-interview-form button:hover {
+        background-color: #e76f51;
+    }
+
+
+.leave-management-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #e0d0c1;
+}
+
+.approve-button, .reject-button {
+    background-color: #f4a261; /* Warm orange color */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Adds spacing if there are multiple buttons */
+}
+
+    .approve-button:hover, .reject-button:hover {
+        background-color: #e76f51; /* Darker shade for hover effect */
+    }
+
+.attendance-management-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.select-date-section {
+    margin-bottom: 20px;
+}
+
+    .select-date-section label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+#attendance-date, #filter-attendance-button {
+    display: inline-block;
+}
+
+#filter-attendance-button {
+    background-color: #f4a261; /* Warm orange color */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+    #filter-attendance-button:hover {
+        background-color: #e76f51; /* Darker shade for hover effect */
+    }
+
+.payroll-management-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.select-month-section {
+    margin-bottom: 20px;
+}
+
+    .select-month-section label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+#payroll-month, #filter-payroll-button {
+    display: inline-block;
+}
+
+.filter-payroll-button {
+    background-color: #f4a261; /* Warm orange color */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+    .filter-payroll-button:hover {
+        background-color: #e76f51; /* Darker shade for hover effect */
+    }
+
+
+.training-management-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.filter-training-button:hover {
+    background-color: #e76f51; /* Darker shade for hover effect */
+}
+
+.benefits-management-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+.add-benefit-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+.retirement-record-section, .add-retirement-section {
+    background-color: #fff;
+    border: 1px solid #e0d0c1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.add-retirement-form label,
+.add-retirement-form input,
+.add-retirement-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.add-retirement-form button {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .add-retirement-form button:hover {
+        background-color: #d35400;
+    }
+
+.add-attendance-form button {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .add-attendance-form button:hover {
+        background-color: #d35400;
+    }
